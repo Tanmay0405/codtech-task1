@@ -1,0 +1,187 @@
+/* styles.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.3s ease;
+}
+
+#app {
+    background: rgb(151, 137, 137);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.todo-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    transition: border-color 0.3s ease;
+}
+
+.todo-input input:focus {
+    border-color: #6200ea;
+    outline: none;
+}
+
+.todo-input button {
+    padding: 10px;
+    border: none;
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    color: white;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.todo-input button:hover {
+    background: linear-gradient(135deg, #3700b3, #6200ea);
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    color: white;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todo-list li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#todo-list li:hover {
+    transform: translateY(-3px);
+}
+
+#todo-list li.completed {
+    text-decoration: line-through;
+    background: #e0e0e0;
+}
+
+#todo-list li button {
+    background: none;
+    border: none;
+    color: #6200ea;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#todo-list li button:hover {
+    color: #3700b3;
+}
+
+#theme-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(135deg, #3700b3, #6200ea);
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #232526, #5e6164);
+}
+
+body.dark-mode #app {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode .todo-input input {
+    background: #555;
+    color: white;
+}
+
+body.dark-mode .filter-btn {
+    background: #555;
+    color: white;
+}
+
+body.dark-mode .filter-btn.active,
+body.dark-mode .filter-btn:hover {
+    background: linear-gradient(135deg, #bb86fc, #6200ea);
+    color: black;
+}
+
+body.dark-mode #todo-list li {
+    background: #444;
+}
+
+body.dark-mode #todo-list li.completed {
+    background: #555;
+}
+
+body.dark-mode #todo-list li button {
+    color: #bb86fc;
+}
+
+body.dark-mode #todo-list li button:hover {
+    color: #6200ea;
+}
+
+body.dark-mode #theme-toggle {
+    background: linear-gradient(135deg, #bb86fc, #6200ea);
+    color: black;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+}
